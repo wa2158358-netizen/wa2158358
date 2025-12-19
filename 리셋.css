@@ -1,0 +1,101 @@
+/* ------------------ Modern Reset.css ------------------ */
+
+/* 기본 요소 초기화 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML 기본 속성 */
+html,
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  background: #fff;
+  color: #000;
+}
+
+/* 텍스트 요소 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+p, blockquote, pre, figure {
+  margin: 0;
+}
+
+/* 링크와 버튼 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 리스트 */
+ul, ol {
+  list-style: none;
+}
+
+/* 이미지 및 미디어 */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 입력 요소 */
+input, textarea, select {
+  font: inherit;
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+/* 테이블 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 인용 및 코드 */
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after {
+  content: none;
+}
+code, pre, kbd {
+  font-family: Consolas, monospace;
+}
+
+/* 스크롤바 */
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* 시각적으로 숨기기 (접근성용) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
