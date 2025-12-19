@@ -1,0 +1,283 @@
+/* style.css - 이력서 + Netflix 헤더 조합 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Netflix 스타일 헤더 (상단 고정) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+}
+
+.language-btn {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.language-btn:hover {
+  background: #444;
+}
+
+.language-btn img {
+  width: 12px;
+  height: 12px;
+}
+
+nav button:not(.language-btn) {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+nav button:not(.language-btn):hover {
+  background: #f40612;
+}
+
+/* 이력서 본문 (헤더 아래) */
+body {
+  font-family: 'Noto Sans KR', 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding-top: 100px; /* 헤더 공간 확보 */
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin: 0 auto 40px;
+  padding: 40px 20px;
+  max-width: 900px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 0 0 10px;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin: 0 0 15px;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #555;
+  background: rgba(52,152,219,0.1);
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  border: 2px solid rgba(52,152,219,0.2);
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 30px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+section h2 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #61dafb);
+  border-radius: 2px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(52,152,219,0.05);
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background: rgba(52,152,219,0.1);
+  transform: translateX(5px);
+}
+
+strong {
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* 스킬 바 개선 */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-container p {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.skill-progress {
+  flex: 1;
+  background: linear-gradient(90deg, #e0e0e0, #d0d0d0);
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.skill-fill::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.ps { background: linear-gradient(135deg, #00a4e4, #0099cc); width: 70%; }
+.html { background: linear-gradient(135deg, #e34f26, #cc3d1f); width: 60%; }
+.css { background: linear-gradient(135deg, #1572b6, #0f5a9a); width: 40%; }
+.js { background: linear-gradient(135deg, #f7df1e, #e6ce18); width: 30%; }
+.react { background: linear-gradient(135deg, #61dafb, #4cc8f0); width: 20%; }
+
+/* 반응형 */
+@media (max-width: 768px) {
+  body { padding: 20px 10px 20px; padding-top: 90px; }
+  nav { padding: 0 15px; }
+  header { padding: 30px 15px; margin-bottom: 30px; }
+  section { padding: 20px 15px; margin-bottom: 20px; }
+  .skills-container p { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .skill-progress { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .header nav { height: 50px; }
+  .language-btn { padding: 6px 10px; font-size: 13px; }
+}
+
+/* 스크롤 애니메이션 */
+.scrolled {
+  background: rgba(0, 0, 0, 0.98) !important;
+  padding: 5px 0;
+}
+
+.scrolled nav {
+  height: 50px;
+}
+
+/* 등장 애니메이션 */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
