@@ -1,101 +1,200 @@
-/* ------------------ Modern Reset.css ------------------ */
-
-/* 기본 요소 초기화 */
-*,
-*::before,
-*::after {
+/* style.css - Netflix 스타일 랜딩페이지 */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* HTML 기본 속성 */
-html,
 body {
-  height: 100%;
-  font-family: system-ui, -apple-system, "Pretendard", "Noto Sans KR", sans-serif;
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  background: #fff;
-  color: #000;
+  font-family: 'Arial', sans-serif;
+  background: #141414;
+  color: #fff;
+  line-height: 1.4;
+  overflow-x: hidden;
 }
 
-/* 텍스트 요소 */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-p, blockquote, pre, figure {
-  margin: 0;
-}
-
-/* 링크와 버튼 */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-button {
-  border: none;
-  background: none;
-  font: inherit;
-  cursor: pointer;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  transition: all 0.3s ease;
 }
 
-/* 리스트 */
-ul, ol {
-  list-style: none;
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
-/* 이미지 및 미디어 */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+.logo {
+  height: 35px;
+  width: auto;
 }
 
-/* 입력 요소 */
-input, textarea, select {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  border: none;
-}
-
-/* 테이블 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* 인용 및 코드 */
-blockquote, q {
-  quotes: none;
-}
-blockquote::before, blockquote::after {
-  content: none;
-}
-code, pre, kbd {
-  font-family: Consolas, monospace;
-}
-
-/* 스크롤바 */
-html::-webkit-scrollbar {
-  width: 8px;
-}
-html::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+.language-btn {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 12px;
   border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
 }
 
-/* 시각적으로 숨기기 (접근성용) */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.language-btn:hover {
+  background: #444;
+}
+
+.language-btn img {
+  width: 12px;
+  height: 12px;
+}
+
+nav button:not(.language-btn) {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav button:not(.language-btn):hover {
+  background: #f40612;
+}
+
+.header-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1489599092522-321b6b1f5963?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header-content h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.header-content h3 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin-bottom: 30px;
+  font-weight: 400;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.email-sigup {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.email-sigup input {
+  flex: 1;
+  min-width: 300px;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  outline: none;
+}
+
+.email-sigup input::placeholder {
+  color: #666;
+}
+
+.email-sigup button {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.email-sigup button:hover {
+  background: #f40612;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    background: #141414;
+  }
+  
+  nav {
+    padding: 0 15px;
+  }
+  
+  .header-content {
+    background-attachment: scroll;
+    padding: 80px 15px 40px;
+    min-height: auto;
+  }
+  
+  .email-sigup {
+    flex-direction: column;
+  }
+  
+  .email-sigup input {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    margin-top: 20px;
+  }
+  
+  .language-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+/* 스크롤 시 헤더 변화 */
+.scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+  padding: 5px 0;
+}
+
+.scrolled nav {
+  height: 50px;
 }
