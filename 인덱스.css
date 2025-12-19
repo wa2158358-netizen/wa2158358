@@ -1,4 +1,83 @@
-   <div class="header"></div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안승찬 - 프론트엔드 개발자 이력서</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #f8f9fa; }
+        header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #3498db; }
+        header h1 { font-size: 2.5em; margin: 0 0 10px; color: #2c3e50; }
+        header h2 { font-size: 1.5em; margin: 0; color: #7f8c8d; }
+        section { margin-bottom: 30px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        section h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .skill-progress { background: #e0e0e0; height: 8px; border-radius: 4px; margin: 5px 0; overflow: hidden; }
+        .skill-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+        .html { background: #e34f26; width: 60%; }
+        .css { background: #1572b6; width: 40%; }
+        .js { background: #f7df1e; width: 30%; }
+        .react { background: #61dafb; width: 20%; }
+        .ps { background: #00a4e4; width: 70%; }
+        strong { color: #3498db; }
+        @media (max-width: 768px) { body { padding: 10px; } section { padding: 15px; } header h1 { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>안승찬</h1>
+        <h2>프론트엔드 개발자 (전 방사선학과)</h2>
+        <p>1995.04.25 | 010-2344-9525 | wa2158358@gmail.com</p>
+    </header>
+
+    <section id="about">
+        <h2>ABOUT ME</h2>
+        <p>방사선학과 졸업 후 웹 개발에 매력을 느껴 프론트엔드 개발자로 전환했습니다. HTML/CSS/JS와 React를 독학하며 사용자 중심 UI/UX를 구현하는 데 집중하고 있습니다. 반응형 디자인과 성능 최적화에 강한 관심을 가지고 있습니다.</p>
+    </section>
+
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <ul>
+            <li>남부대학교 방사선학과 (2014~2020)</li>
+            <li>[이스트캠프] 오르미 프론트엔드 부트캠프 11기 (2025 진행 중)</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>SKILLS</h2>
+        <div class="skills-container">
+            <p>Photoshop <div class="skill-progress"><div class="skill-fill ps"></div></div> 70%</p>
+            <p>HTML <div class="skill-progress"><div class="skill-fill html"></div></div> 60%</p>
+            <p>CSS <div class="skill-progress"><div class="skill-fill css"></div></div> 40%</p>
+            <p>JavaScript <div class="skill-progress"><div class="skill-fill js"></div></div> 30%</p>
+            <p>React <div class="skill-progress"><div class="skill-fill react"></div></div> 20%</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <ul>
+            <li><strong>반응형 포트폴리오 사이트</strong> - HTML/CSS/JS, 모바일 퍼스트 디자인</li>
+            <li><strong>To-Do 앱</strong> - React, 로컬스토리지 연동</li>
+            <li><strong>날씨 앱</strong> - OpenWeatherMap API 연동</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT</h2>
+        <ul>
+            <li>📞 010-2344-9525</li>
+            <li>✉️ wa2158358@gmail.com</li>
+            <li>🌐 GitHub: <a href="https://github.com/wa2158358-netizen">wa2158358-netizen</a></li>
+            <li>📷 Instagram: <a href="https://instagram.com/wa2158358">wa2158358</a></li>
+            <li>💼 Portfolio: COMING SOON</li>
+        </ul>
+    </section>
+</body>
+</html>
+
+<div class="header"></div>
 <nav>
     <img src="images/logo.png" class="logo">
     <div>
