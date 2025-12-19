@@ -1,0 +1,14 @@
+   <div class="header"></div>
+<nav>
+    <img src="images/logo.png" class="logo">
+    <div>
+       <button class="language-btn">한국어 <img src="images/down-icon.png"></button>
+        <button>로그인</button>
+      <div class="header-content"></h1>
+        <h1>영화, 시리즈 등을 무제한으로</h1>
+        <h3>7,000원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</h3>
+        <p>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+        <form class="email-sigup">
+          <input type="email" placeholder="이메일 주소" required>
+          <button type="submit"> 시작하기</button>
+
